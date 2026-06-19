@@ -1,20 +1,20 @@
 :root {
-    --bg-primary: #0b0f19;      /* Deep dark space blue */
-    --bg-secondary: #151b2c;    /* Card & sidebar dark blue */
-    --bg-tertiary: #1f2940;     /* Selected states and hovered list items */
-    --text-primary: #f8fafc;    /* Very light gray-white */
-    --text-secondary: #94a3b8;  /* Cool muted gray */
-    --text-muted: #64748b;      /* Darker muted gray */
-    --accent-gradient-1: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); /* Indigo to purple */
-    --accent-gradient-2: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%); /* Blue to cyan */
-    --accent-gradient-3: linear-gradient(135deg, #10b981 0%, #3b82f6 100%); /* Emerald to blue */
-    --accent-indigo: #6366f1;
-    --accent-purple: #a855f7;
-    --accent-cyan: #06b6d4;
-    --accent-blue: #3b82f6;
-    --accent-emerald: #10b981;
-    --border-color: rgba(255, 255, 255, 0.06);
-    --border-hover: rgba(255, 255, 255, 0.12);
+    --bg-primary: #f8fafc;      /* Slate 50 - Light background */
+    --bg-secondary: #ffffff;    /* White - Sidebar and Card background */
+    --bg-tertiary: #f1f5f9;     /* Slate 100 - Active state & hover background */
+    --text-primary: #0f172a;    /* Slate 900 - Dark text for high contrast */
+    --text-secondary: #475569;  /* Slate 600 - Secondary text */
+    --text-muted: #64748b;      /* Slate 500 - Muted text */
+    --accent-gradient-1: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); /* Indigo to purple */
+    --accent-gradient-2: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%); /* Blue to cyan */
+    --accent-gradient-3: linear-gradient(135deg, #059669 0%, #2563eb 100%); /* Emerald to blue */
+    --accent-indigo: #4f46e5;
+    --accent-purple: #7c3aed;
+    --accent-cyan: #0891b2;
+    --accent-blue: #2563eb;
+    --accent-emerald: #059669;
+    --border-color: #e2e8f0;    /* Slate 200 - Light border */
+    --border-hover: #cbd5e1;    /* Slate 300 - Border on hover */
     
     --sidebar-width: 260px;
     --radius-sm: 8px;
@@ -22,8 +22,8 @@
     --radius-lg: 16px;
     
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
     
     --transition-fast: 0.15s ease;
     --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -90,7 +90,7 @@ body {
     font-weight: 700;
     font-size: 18px;
     letter-spacing: 0.5px;
-    background: linear-gradient(to right, #ffffff, var(--text-secondary));
+    background: linear-gradient(to right, var(--text-primary), var(--text-secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -125,13 +125,13 @@ body {
 
 .menu-item a:hover {
     color: var(--text-primary);
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: rgba(0, 0, 0, 0.03);
 }
 
 .menu-item.active a {
-    color: var(--text-primary);
+    color: #ffffff;
     background: var(--accent-gradient-1);
-    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.2);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
 }
 
 .sidebar-footer {
@@ -155,7 +155,7 @@ body {
 /* Navbar Styling */
 .navbar {
     height: 70px;
-    background-color: rgba(21, 27, 44, 0.8);
+    background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
     display: flex;
@@ -312,7 +312,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 16px;
-    background-color: rgba(255, 255, 255, 0.04);
+    background-color: rgba(0, 0, 0, 0.02);
 }
 
 .card-blue .stat-icon { color: var(--accent-cyan); background-color: rgba(6, 182, 212, 0.1); }
@@ -376,7 +376,7 @@ body {
 }
 
 .custom-table th {
-    background-color: rgba(255, 255, 255, 0.01);
+    background-color: rgba(0, 0, 0, 0.015);
     color: var(--text-secondary);
     font-weight: 600;
     padding: 16px 24px;
@@ -398,7 +398,7 @@ body {
 }
 
 .custom-table tbody tr:hover {
-    background-color: rgba(255, 255, 255, 0.015);
+    background-color: rgba(0, 0, 0, 0.01);
 }
 
 .custom-table tbody tr:last-child td {
@@ -417,30 +417,30 @@ body {
 }
 
 .badge-reguler {
-    background-color: rgba(59, 130, 246, 0.12);
-    color: #60a5fa;
+    background-color: rgba(37, 99, 235, 0.08);
+    color: #1d4ed8;
 }
 
 .badge-prestasi {
-    background-color: rgba(168, 85, 247, 0.12);
-    color: #c084fc;
+    background-color: rgba(124, 58, 237, 0.08);
+    color: #6d28d9;
 }
 
 .badge-kedinasan {
-    background-color: rgba(245, 158, 11, 0.12);
-    color: #fbbf24;
+    background-color: rgba(217, 119, 6, 0.08);
+    color: #b45309;
 }
 
 .badge-level {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #f1f5f9;
     color: var(--text-secondary);
     border: 1px solid var(--border-color);
 }
 
 /* Score highlight */
 .score-badge {
-    background-color: rgba(16, 185, 129, 0.12);
-    color: #34d399;
+    background-color: rgba(5, 150, 105, 0.08);
+    color: #047857;
     padding: 2px 8px;
     border-radius: 4px;
     font-weight: 700;

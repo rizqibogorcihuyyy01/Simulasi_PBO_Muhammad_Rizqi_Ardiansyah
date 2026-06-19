@@ -188,9 +188,9 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
                                         <th>Asal Sekolah</th>
                                         <th>Nilai Ujian</th>
                                         <th>Jalur</th>
-                                        <th>Informasi Khusus Jalur (Polimorfik)</th>
+                                        <th>Informasi Khusus Jalur</th>
                                         <th>Biaya Dasar</th>
-                                        <th>Total Biaya (Polimorfik)</th>
+                                        <th>Total Biaya</th>
                                     </tr>
                                 </thead>
                                 <tbody>
