@@ -21,8 +21,8 @@ class PendaftaranKedinasan extends Pendaftaran {
 
     // Mengimplementasikan metode abstrak
     public function hitungTotalBiaya() {
-        // Jalur Kedinasan biaya pendaftarannya ditanggung oleh instansi sponsor (Gratis/0 bagi calon pendaftar)
-        return 0;
+        // Dikenakan surcharge/biaya tambahan sebesar 25% dari biaya dasar
+        return $this->biayaPendaftaranDasar * 1.25;
     }
 
     public function tampilkanInfoJalur() {

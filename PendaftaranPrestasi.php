@@ -21,16 +21,8 @@ class PendaftaranPrestasi extends Pendaftaran {
 
     // Mengimplementasikan metode abstrak
     public function hitungTotalBiaya() {
-        // Jalur Prestasi mendapatkan potongan biaya
-        // Potongan 50% untuk tingkat Internasional & Nasional, serta 20% untuk tingkat lainnya
-        $potongan = 0;
-        $tingkat = strtolower($this->tingkatPrestasi);
-        if ($tingkat == 'nasional' || $tingkat == 'internasional') {
-            $potongan = 0.50 * $this->biayaPendaftaranDasar;
-        } else {
-            $potongan = 0.20 * $this->biayaPendaftaranDasar;
-        }
-        return $this->biayaPendaftaranDasar - $potongan;
+        // Mendapatkan potongan/insentif apresiasi prestasi sebesar Rp50.000 dari biaya dasar
+        return $this->biayaPendaftaranDasar - 50000;
     }
 
     public function tampilkanInfoJalur() {
